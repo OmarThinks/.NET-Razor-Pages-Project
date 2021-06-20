@@ -2,10 +2,10 @@
 @model SocialApp.Pages_Posts.IndexModel
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Posts";
 }
 
-<h1>Index</h1>
+<h1>Posts</h1>
 
 <p>
     <a asp-page="Create">Create New</a>
@@ -26,6 +26,7 @@
 @foreach (var item in Model.Post) {
         <tr>
             <td>
+                @Html.DisplayFor(modelItem => item.ID))
                 @Html.DisplayFor(modelItem => item.Content)
             </td>
             <td>
