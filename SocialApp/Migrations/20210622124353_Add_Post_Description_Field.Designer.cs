@@ -2,14 +2,16 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace SocialApp.Migrations
 {
     [DbContext(typeof(SocialAppContext))]
-    partial class SocialAppContextModelSnapshot : ModelSnapshot
+    [Migration("20210622124353_Add_Post_Description_Field")]
+    partial class Add_Post_Description_Field
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
