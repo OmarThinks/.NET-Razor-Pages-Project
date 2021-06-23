@@ -1,8 +1,9 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using RazorPagesMovie.Models;
 
 namespace SocialApp.Data
 {
@@ -12,5 +13,6 @@ namespace SocialApp.Data
             : base(options)
         {
         }
+        public DbSet<RazorPagesMovie.Models.Post> Post { get; set; }
     }
 }
