@@ -14,5 +14,6 @@ namespace SocialApp.Data
         {
         }
         public DbSet<RazorPagesMovie.Models.Post> Post { get; set; }
+        public DbSet<RazorPagesMovie.Models.Comment> Comment { get; set; }
     }
 }
