@@ -48,8 +48,15 @@ namespace SocialApp.Pages_comments
              select c;
             if (!string.IsNullOrEmpty(post_id))
             {
-                int PostIdInt = Int32.Parse(post_id);
-
+                int PostIdInt;
+                try 
+                {
+                    PostIdInt = Int32.Parse(post_id);
+                }
+                catch
+                {
+                    PostIdInt = -500;
+                }
                 comments = comments.Where(s => s.PostId.Equals(PostIdInt));
             }
 
