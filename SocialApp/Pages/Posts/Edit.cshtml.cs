@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore;
 using RazorPagesMovie.Models;
 using SocialApp.Data;
 
-namespace SocialApp.Pages_Posts
+namespace SocialApp.Pages_posts
 {
     public class EditModel : PageModel
     {

@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using RazorPagesMovie.Models;
 using SocialApp.Data;
 
-namespace SocialApp.Pages_Posts
+namespace SocialApp.Pages_posts
 {
     public class CreateModel : PageModel
     {
