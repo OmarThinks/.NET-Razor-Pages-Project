@@ -1,6 +1,9 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using RazorPagesMovie.Models;
+
+
 
 namespace RazorPagesMovie.Models
 {
@@ -13,5 +16,8 @@ namespace RazorPagesMovie.Models
         [Display(Name = "Release Date")]
         public DateTime ReleaseDate { get; set; }
         public string Description { get; set; }
+
+    	//[InverseProperty("Post")]
+    	//public List<Comment> Comments { get; set; }
     }
 }
