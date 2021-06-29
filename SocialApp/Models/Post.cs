@@ -2,7 +2,8 @@ using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using RazorPagesMovie.Models;
-
+using System.Collections.Generic;
+using System.Linq;
 
 
 namespace RazorPagesMovie.Models
@@ -18,6 +19,6 @@ namespace RazorPagesMovie.Models
         public string Description { get; set; }
 
     	//[InverseProperty("Post")]
-    	//public List<Comment> Comments { get; set; }
+    	public List<Comment> Comments { get; set; }
     }
 }
