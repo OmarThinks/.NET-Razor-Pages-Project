@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using RazorPagesMovie.Models;
 using SocialApp.Data;
 
-namespace SocialApp.Pages_Comments
+namespace SocialApp.Pages_comments
 {
     public class DetailsModel : PageModel
     {
@@ -28,7 +28,8 @@ namespace SocialApp.Pages_Comments
                 return NotFound();
             }
 
-            Comment = await _context.Comment.FirstOrDefaultAsync(m => m.ID == id);
+            Comment = await _context.Comment
+                .Include(c => c.Post).FirstOrDefaultAsync(m => m.ID == id);
 
             if (Comment == null)
             {

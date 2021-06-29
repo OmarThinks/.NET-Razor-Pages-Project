@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using RazorPagesMovie.Models;
 using SocialApp.Data;
 
-namespace SocialApp.Pages_Comments
+namespace SocialApp.Pages_comments
 {
     public class IndexModel : PageModel
     {
@@ -23,7 +23,8 @@ namespace SocialApp.Pages_Comments
 
         public async Task OnGetAsync()
         {
-            Comment = await _context.Comment.ToListAsync();
+            Comment = await _context.Comment
+                .Include(c => c.Post).ToListAsync();
         }
     }
 }

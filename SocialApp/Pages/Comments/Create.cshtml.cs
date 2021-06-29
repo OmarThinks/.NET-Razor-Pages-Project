@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using RazorPagesMovie.Models;
 using SocialApp.Data;
 
-namespace SocialApp.Pages_Comments
+namespace SocialApp.Pages_comments
 {
     public class CreateModel : PageModel
     {
@@ -21,6 +21,7 @@ namespace SocialApp.Pages_Comments
 
         public IActionResult OnGet()
         {
+        ViewData["PostId"] = new SelectList(_context.Post, "ID", "ID");
             return Page();
         }
 

@@ -19,3 +19,12 @@ namespace RazorPagesMovie.Models
 	    public Post Post { get; set; }
     }
 }
+
+
+
+/*
+
+dotnet-aspnet-codegenerator razorpage -m Comment -dc SocialApp.Data.ApplicationDbContext -udl -outDir Pages/comments --referenceScriptLibraries -sqlite
+
+
+*/
